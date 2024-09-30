@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-2">
+        <div class="header-2">
+            <h3>ผลงานแผนก</h3>
+        </div>
+        <div class="Boxes">
+            <div class="Box">
+                <a href="">
+                    <img src="./1.jpg" height="200px" width="300px">
+                </a>
+            </div>
+            <div class="Box">
+                <a href="">
+                    <img src="./2.jpg" height="200px" width="300">  
+                </a>
+            </div>
+            <div class="Box">
+                <a href="">
+                    <img src="./3.jpg" height="200px" width="275px">    
+                </a>   
+            </div>
+            <div class="Box">
+                <a href="">
+                    <img src="./4 (1).jpg" height="200px" width="275px">   
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    /* ตกแต่ง container ให้มีขนาด */
+    .container-2 {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* จัดให้กล่องเรียงตัวในแนวนอน */
+    .Boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* ตกแต่งแต่ละกล่องให้มีขนาดเท่ากัน เพิ่มกรอบ เงา และพื้นหลัง */
+    .Box {
+        flex: 1 1 calc(25% - 10px); /* ให้แต่ละกล่องกินพื้นที่ 25% ของ container และมีระยะห่าง */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f9f9f9; /* พื้นหลังสีอ่อน */
+        border: 2px solid #ddd; /* กรอบบางๆ */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาอ่อน */
+        border-radius: 8px; /* มุมมน */
+        padding: 10px; /* ระยะห่างภายใน */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อ hover */
+    }
+
+    /* เมื่อ hover ที่กล่อง */
+    .Box:hover {
+        transform: translateY(-5px); /* กล่องยกขึ้นเมื่อ hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    }
+
+    /* ตกแต่งรูปภาพในแต่ละกล่อง */
+    .Box img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;   
+        max-height: 200px;
+        border-radius: 8px; /* รูปภาพมุมมน */
+    }
+
+    /* จัดให้ header อยู่ตรงกลาง */
+    .header-2 h3 {
+        text-align: center;
+    }
+</style>
